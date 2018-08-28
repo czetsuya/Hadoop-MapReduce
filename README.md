@@ -57,16 +57,23 @@ hdfs-site.xml
 
 3.) Run Hadoop namenode -format
 Don't forget the file:/// prefix in hdfs-site.xml for windows. Otherwise, the format will fail.
+
 4.) Run Hadoop_HOME/sbin/start-dfs.xml.
+
 5.) If all goes well, you can check the log for the web port in the console. In my case it's http://localhost:9870.
+
 6.) You can now upload any file in the #4 URL.
 
 Now let's try to create a project that will test our Hadoop setup. Or download an already existing one. For example this project: https://www.guru99.com/create-your-first-Hadoop-program.html. It has a nice explanation with it, so let's try. I've repackaged it into a pom project and uploaded at Github at https://github.com/czetsuya/Hadoop-MapReduce.
 
 1.) Clone the repository.
+
 2.) Open the hdfs url from the #5 above, and create an input and output folder.
+
 3.) In input folder, upload the file SalesJan2009 from the project's root folder.
+
 4.) Run Hadoop jar Hadoop-mapreduce-0.0.1-SNAPSHOT.jar /input /output.
+
 5.) Check the output from the URL and download the resulting file.
 
 Here's a more complicated example https://github.com/rathboma/Hadoop-framework-examples/tree/master/java-mapreduce.
